@@ -1,0 +1,1 @@
+SELECT name from people WHERE people.id = stars.person_id AND movies.id = stars.movie_id WHERE movie_id = (SELECT movies.id from movies JOIN stars ON movies.id = stars.movie_id JOIN people ON people.id = stars.person_id WHERE name = "Kevin Bacon")
